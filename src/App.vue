@@ -4,7 +4,7 @@
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -13,16 +13,8 @@
   background: radial-gradient(circle, #051340 1%, #040f32 100%);
 }
 
-#nav {
-  padding: 30px;
+.card {
+  background-color: #01081f;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

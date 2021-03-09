@@ -1,85 +1,30 @@
 <template>
-  <dl class="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
-    <div
-      class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
-      v-for="card in cardsInfo" :key="card.index"
-    >
-      <div class="px-4 py-5 sm:p-6 text-center w-3/5">
-        <div class="chart-info-wrapper mt-5">
-          <h2 class="text-sm font-medium text-gray-400 font-bold">{{ card.name }}</h2>
-          <span class="mt-1 text-3xl font-semibold text-white">{{ card.amount }}</span>
-        </div>
-      </div>
-
-      <div class="text-center w-2/5 flex justify-center items-center chart-container">
-        <div class="chart-svg">
-          <svg viewBox="0 0 36 36" class="circular-chart" :class="'color' + card.index">
-            <path class="circle-bg" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-            <path class="circle" :stroke-dasharray="`${card.progress}, 100`" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-            <text x="18" y="20.35" class="percentage">30%</text>
-          </svg>
-        </div>
-
+  <div
+    class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
+    v-for="card in cardsInfo" :key="card.index"
+  >
+    <div class="px-4 py-5 sm:p-6 text-center w-3/5">
+      <div class="chart-info-wrapper">
+        <h2 class="text-sm text-gray-400 font-bold">{{ card.name }}</h2>
+        <span class="mt-1 text-3xl font-semibold text-white">{{ card.amount }}</span>
       </div>
     </div>
 
-    <!-- <div
-      class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
-    >
-      <div class="px-4 py-5 sm:p-6 text-center w-3/5">
-        <div class="chart-info-wrapper mt-5">
-          <h2 class="text-sm font-medium text-gray-400 font-bold">SHORTLISTED</h2>
-          <span class="mt-1 text-3xl font-semibold text-white">5.5 K</span>
-        </div>
+    <div class="text-center w-2/5 flex justify-center items-center chart-container">
+      <div class="chart-svg">
+        <svg viewBox="0 0 36 36" class="circular-chart" :class="'color' + card.index">
+          <path class="circle-bg" d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+          <path class="circle" :stroke-dasharray="`${card.progress}, 100`" d="M18 2.0845
+              a 15.9155 15.9155 0 0 1 0 31.831
+              a 15.9155 15.9155 0 0 1 0 -31.831"></path>
+          <text x="18" y="20.35" class="percentage">30%</text>
+        </svg>
       </div>
 
-      <div class="text-center w-2/5 flex justify-center items-center chart-container">
-        <div class="chart-svg">
-          <svg viewBox="0 0 36 36" class="circular-chart blue">
-            <path class="circle-bg" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-            <path class="circle" :stroke-dasharray="`${progress2}, 100`" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-            <text x="18" y="20.35" class="percentage">90%</text>
-          </svg>
-        </div>
-
-      </div>
     </div>
-
-    <div
-      class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
-    >
-      <div class="px-4 py-5 sm:p-6 text-center w-3/5">
-        <div class="chart-info-wrapper mt-5">
-          <h2 class="text-sm font-medium text-gray-400 font-bold">ON-HOLD</h2>
-          <span class="mt-1 text-3xl font-semibold text-white">10.5 K</span>
-        </div>
-      </div>
-
-      <div class="text-center w-2/5 flex justify-center items-center chart-container">
-        <div class="chart-svg">
-          <svg viewBox="0 0 36 36" class="circular-chart pink">
-            <path class="circle-bg" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-            <path class="circle" :stroke-dasharray="`${progress3}, 100`" d="M18 2.0845
-                a 15.9155 15.9155 0 0 1 0 31.831
-                a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-            <text x="18" y="20.35" class="percentage">60%</text>
-          </svg>
-        </div>
-
-      </div>
-    </div> -->
-
-  </dl>
+  </div>
 </template>
 
 
@@ -125,11 +70,6 @@ export default {
 </script>
 
 <style scoped>
-.card {
-  background-color: #01081f;
-}
-
-
 .chart-container {
   padding: 16px;
 }

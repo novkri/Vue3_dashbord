@@ -26,8 +26,22 @@
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div class="px-4 py-6 sm:px-0">
-          <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
-            <Card :cardsInfo="cardsInfo" />
+          <div class="border-4 border-dashed border-gray-200 rounded-lg">
+              <div class="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
+                <Card :cardsInfo="cardsInfo" />
+                <div class="col-span-2">
+                  <TopActiveJobs />
+                </div>
+                
+                <div class="border border-white">Acquisitions
+                  
+                  
+                </div>
+                <div class="border border-white col-start-3">New Applicants
+                  
+                </div>
+                
+              </div>
           </div>
         </div>
         
@@ -41,13 +55,15 @@
 <script>
 import Sidebar from "@/components/Sidebar.vue";
 import Card from "@/components/Card.vue";
+import TopActiveJobs from "@/components/TopActiveJobs.vue";
 import { mapGetters } from 'vuex';
 
 export default {
   name: "Home",
   components: {
     Sidebar,
-    Card
+    Card,
+    TopActiveJobs
   },
   data: () => {
     return {
