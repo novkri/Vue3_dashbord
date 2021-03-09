@@ -1,14 +1,23 @@
 # dashbord
 
-## Project setup
+## 1. Project setup
 ```
 npm install
 ```
+### 2. Запустить с сервер
+```
+npm run server
+```
 
-### Compiles and hot-reloads for development
+### 3. Запустить во втором териминале проект
 ```
 npm run serve
 ```
+### 2. ИЛИ запустить одновременно
+```
+npm run start
+```
+
 
 ### Compiles and minifies for production
 ```

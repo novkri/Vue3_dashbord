@@ -1,16 +1,19 @@
 {
     "dummyData": [
         {
+            "index": 0,
             "name": "applications",
             "amount": "20500",
             "progress": "30"
         },
         {
+            "index": 1,
             "name": "SHORTLISTED",
             "amount": "5500",
             "progress": "50"
         },
         {
+            "index": 2,
             "name": "on-hold",
             "amount": "10500",
             "progress": "76"

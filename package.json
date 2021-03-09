@@ -5,9 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "server": "json-server --watch db.json", 
+    "start": "concurrently npm:json-server --watch db.json npm:serve"
   },
   "dependencies": {
+    "concurrently": "^6.0.0",
     "core-js": "^3.6.5",
     "vue": "^3.0.0",
     "vue-progressbar": "^0.7.5",

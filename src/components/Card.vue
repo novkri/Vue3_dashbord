@@ -2,7 +2,7 @@
   <dl class="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
     <div
       class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
-      v-for="card in dummyData" :key="card.index"
+      v-for="card in cardsInfo" :key="card.index"
     >
       <div class="px-4 py-5 sm:p-6 text-center w-3/5">
         <div class="chart-info-wrapper mt-5">
@@ -88,6 +88,9 @@
 export default {
   name: "Home",
   components: {
+  },
+  props: {
+    cardsInfo: Array
   },
   data: () => {
     return {

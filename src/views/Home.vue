@@ -27,8 +27,7 @@
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div class="px-4 py-6 sm:px-0">
           <div class="border-4 border-dashed border-gray-200 rounded-lg h-96">
-            <Card />
-
+            <Card :cardsInfo="cardsInfo" />
           </div>
         </div>
         
@@ -42,6 +41,7 @@
 <script>
 import Sidebar from "@/components/Sidebar.vue";
 import Card from "@/components/Card.vue";
+import { mapGetters } from 'vuex';
 
 export default {
   name: "Home",
@@ -53,6 +53,25 @@ export default {
     return {
       isMenuOpen: false,
     }
+  },
+  computed: {
+    // смешиваем результат mapGetters с внешним объектом computed
+    ...mapGetters([
+      'cardsInfo',
+      // 'anotherGetter'
+      // ...
+    ])
+    // cardsInfo() {
+    //   return this.$store.getters.cards;
+    // }
+  },
+  async mounted() {
+    // let response = await fetch("http://localhost:3000/dummyData")
+    //   .then((response) => {
+    //     return response.json();
+    //   });
+    // console.log(response);
+    this.$store.dispatch("getCardsInfo")
   },
   methods: {
     openMenu() {
