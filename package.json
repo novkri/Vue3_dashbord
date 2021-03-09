@@ -7,7 +7,8 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "server": "json-server --watch db.json", 
-    "start": "concurrently npm:json-server --watch db.json npm:serve"
+    "json-server": "json-server --watch db.json",
+    "start": "concurrently \"npm:json-server\" \"npm:serve\""
   },
   "dependencies": {
     "concurrently": "^6.0.0",
