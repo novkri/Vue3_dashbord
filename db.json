@@ -1,0 +1,20 @@
+{
+    "dummyData": [
+        {
+            "name": "applications",
+            "amount": "20500",
+            "progress": "30"
+        },
+        {
+            "name": "SHORTLISTED",
+            "amount": "5500",
+            "progress": "50"
+        },
+        {
+            "name": "on-hold",
+            "amount": "10500",
+            "progress": "76"
+        }
+    ]
+    
+}
