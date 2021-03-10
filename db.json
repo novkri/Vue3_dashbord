@@ -8,7 +8,7 @@
         },
         {
             "index": 1,
-            "name": "SHORTLISTED",
+            "name": "shortlisted",
             "amount": "5500",
             "progress": "50"
         },
@@ -17,6 +17,28 @@
             "name": "on-hold",
             "amount": "10500",
             "progress": "76"
+        }
+    ],
+    "Acquisitions": [
+        {
+            "index": 0,
+            "name": "applications",
+            "percentage": "64"
+        },
+        {
+            "index": 1,
+            "name": "shortlisted",
+            "percentage": "18"
+        },
+        {
+            "index": 2,
+            "name": "on-hold",
+            "percentage": "10"
+        },
+        {
+            "index": 3,
+            "name": "rejected",
+            "percentage": "8"
         }
     ]
     

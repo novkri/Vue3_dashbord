@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid cursor-pointer"
+    class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid"
     v-for="card in cardsInfo" :key="card.index"
   >
     <div class="px-4 py-5 sm:p-6 text-center w-3/5">
@@ -39,29 +39,6 @@ export default {
   },
   data: () => {
     return {
-      progress1: 40,
-      progress2: 60,
-      progress3: 10,
-      dummyData: [
-        {
-          index: 0,
-          name: "applications",
-          amount: "20.5 K",
-          progress: "30"
-        },
-        {
-          index: 1,
-          name: "SHORTLISTED",
-          amount: "5.5 K",
-          progress: "50"
-        },
-        {
-          index: 2,
-          name: "on-hold",
-          amount: "10.5 K",
-          progress: "76"
-        }
-    ]
     }
   },
   methods: {

@@ -33,9 +33,8 @@
                   <TopActiveJobs />
                 </div>
                 
-                <div class="border border-white">Acquisitions
-                  
-                  
+                <div>
+                  <Acquisitions :acquisitions="acquisitions" />
                 </div>
                 <div class="border border-white col-start-3">New Applicants
                   
@@ -56,6 +55,8 @@
 import Sidebar from "@/components/Sidebar.vue";
 import Card from "@/components/Card.vue";
 import TopActiveJobs from "@/components/TopActiveJobs.vue";
+import Acquisitions from "@/components/Acquisitions.vue";
+
 import { mapGetters } from 'vuex';
 
 export default {
@@ -63,7 +64,8 @@ export default {
   components: {
     Sidebar,
     Card,
-    TopActiveJobs
+    TopActiveJobs,
+    Acquisitions
   },
   data: () => {
     return {
@@ -71,23 +73,14 @@ export default {
     }
   },
   computed: {
-    // смешиваем результат mapGetters с внешним объектом computed
     ...mapGetters([
       'cardsInfo',
-      // 'anotherGetter'
-      // ...
+      'acquisitions'
     ])
-    // cardsInfo() {
-    //   return this.$store.getters.cards;
-    // }
   },
   async mounted() {
-    // let response = await fetch("http://localhost:3000/dummyData")
-    //   .then((response) => {
-    //     return response.json();
-    //   });
-    // console.log(response);
-    this.$store.dispatch("getCardsInfo")
+    this.$store.dispatch("getCardsInfo");
+    this.$store.dispatch("getAcquisitions");
   },
   methods: {
     openMenu() {
