@@ -16,10 +16,10 @@
                 
                 <div class="pl-1 flex flex-col justify-start items-start w-full">
                     <div class="font-normal text-white overflow-ellipsis w-10/12">
-                        {{ person.name }} Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa est cupiditate amet.
+                        {{ person.name }}
                     </div>
                     <div class="text-gray-200 text-sm overflow-ellipsis w-10/12">
-                        Applied for {{ person.application }} asddddddddddddddddddddddddddddddddddddddddddd
+                        Applied for {{ person.application }}
                     </div>
                 </div>
             </div>

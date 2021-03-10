@@ -1,23 +1,30 @@
 <template>
   <div class="home flex">
-    <Sidebar :isMenuOpen="isMenuOpen" />
+    <transition name="slide-fade">
+    <Sidebar :isMenuOpen="isMenuOpen" @openMenu="openMenu()" />
+    </transition>
 
   <div class="flex flex-col w-full">
-      <header class="bg-white shadow">
-        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between">
-          <h1 class="text-3xl font-bold text-gray-900">
-            Dashboard
+      <header class="">
+        <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-between">
+          <h1 class="text-3xl font-bold text-white">
+            Applications Dashboard
           </h1>
+          
 
-          <div class="inline-flex md:hidden">
+          <div class="inline-flex">
+            <button @click="openUserMenu" type="button" class="sidebar-btns inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open user menu</span>
+                <svg class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+            </button>
+          
             <!-- Mobile menu button -->
-            <button @click="openMenu" type="button" class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <button @click="openMenu" type="button" class="sidebar-btns md:hidden inline-flex items-center justify-center p-2 ml-6 mr-2 rounded-md text-white hover:text-white focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
-              <svg :class="{ block: !isMenuOpen, hidden: isMenuOpen }" class=" h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg :class="{ block: isMenuOpen, hidden: !isMenuOpen }" class=" h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
@@ -26,7 +33,7 @@
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div class="px-4 py-6 sm:px-0">
-          <div class="border-4 border-dashed border-gray-200 rounded-lg">
+          <div>
               <div class="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
                 <Card :cardsInfo="cardsInfo" />
                 <div class="lg:col-span-2 lg:row-span-2">
@@ -36,7 +43,7 @@
                 <div>
                   <Acquisitions :acquisitions="acquisitions" />
                 </div>
-                <div class="border border-white lg:col-start-3 lg:row-span-2">
+                <div class="lg:col-start-3 lg:row-span-2">
                   <NewApplicants :applicants="applicants" />
                 </div>
                 
@@ -46,6 +53,8 @@
         
       </div>
     </main>
+
+      <UserSideBar v-if="isUserMenuOpen" :isUserMenuOpen="isUserMenuOpen" @openUserMenu="openUserMenu()" />
   </div>
 
 </div>
@@ -57,6 +66,7 @@ import Card from "@/components/Card.vue";
 import TopActiveJobs from "@/components/TopActiveJobs.vue";
 import Acquisitions from "@/components/Acquisitions.vue";
 import NewApplicants from "@/components/NewApplicants.vue";
+import UserSideBar from "@/components/UserSidebar.vue";
 
 import { mapGetters } from 'vuex';
 
@@ -64,6 +74,7 @@ export default {
   name: "Home",
   components: {
     Sidebar,
+    UserSideBar,
     Card,
     TopActiveJobs,
     Acquisitions,
@@ -72,6 +83,7 @@ export default {
   data: () => {
     return {
       isMenuOpen: false,
+      isUserMenuOpen: false
     }
   },
   computed: {
@@ -89,11 +101,16 @@ export default {
   methods: {
     openMenu() {
       this.isMenuOpen = !this.isMenuOpen
+    },
+    openUserMenu() {
+      this.isUserMenuOpen = !this.isUserMenuOpen
     }
   }
 };
 </script>
 
 <style scoped>
-
+.sidebar-btns {
+  background-color: #01081f;
+}
 </style>

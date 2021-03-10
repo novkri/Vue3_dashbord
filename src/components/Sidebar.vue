@@ -1,18 +1,23 @@
 <template>
-  <nav class="w-auto md:w-64 h-screen md:block" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
+<!-- transition ease-in duration-700  -->
+<!-- <transition name="slide-fade"> -->
+  <nav class="w-80 z-1000 right-0 md:w-72 h-screen md:block absolute md:static" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
     <div class="max-w-7xl mx-auto py-3 md:py-4">
       <div class="flex items-center justify-center">
         <div class="items-center w-full hidden md:flex flex-col">
           <div class="flex items-center">
-            <!-- Profile dropdown -->
-            <div class="relative">
+            <!-- Profile dropdown  class="relative" -->
+            <div>
               <div class="py-5">
-                <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm" id="user-menu" aria-expanded="false" aria-haspopup="true">
+                  <svg class="text-blue-500 md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                  </svg>
+                <span class="font-semibold text-white">Recruiter</span>
+                <!-- <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="userpic max-w-xs bg-gray-800 rounded-full flex items-center text-sm" id="user-menu" aria-expanded="false" aria-haspopup="true">
                   <span class="sr-only">Open user menu</span>
  
                   <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                  <!-- <span>Recruiter</span> -->
-                </button>
+                </button> -->
               </div>
 
               <div :class="{ block: isUserMenuOpen, hidden: !isUserMenuOpen }" class="origin-top-right absolute -left-16 w-44 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
@@ -71,18 +76,27 @@
         </div>
       </div>
     </div>
-
+<!-- <transition name="slide-fade"> -->
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
+      <!-- Mobile menu button -->
+      <div class="flex justify-end pr-6">
+        <button @click="$emit('openMenu')" type="button" class="bg-transparent inline-flex items-center justify-center p-2 text-gray-200 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button> 
+      </div>
+
+
       <div class="flex items-center justify-center">
         <!-- Profile dropdown -->
         <div class="relative">
           <div class="py-2">
-            <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="max-w-xs bg-gray-800 rounded-full flex items-center text-sm" id="user-menu" aria-expanded="false" aria-haspopup="true">
+            <!-- <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="userpic max-w-xs bg-gray-800 rounded-full flex items-center text-sm" id="user-menu" aria-expanded="false" aria-haspopup="true">
               <span class="sr-only">Open user menu</span>
               <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-              <!-- <span>Recruiter</span> -->
-            </button>
+            </button> -->
           </div>
 
           <div :class="{ block: isUserMenuOpen, hidden: !isUserMenuOpen }" class="origin-top-right absolute -left-12 w-32 rounded-md shadow-lg py-1 mt-3 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
@@ -113,12 +127,14 @@
         </li>
       </ul>
     </div>
+<!-- </transition> -->
   </nav>
+<!-- </transition> -->
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
+  name: "SideBar",
     data: () => {
     return {
       isUserMenuOpen: false,
@@ -130,7 +146,8 @@ export default {
   methods: {
     openUserMenu() {
       this.isUserMenuOpen = !this.isUserMenuOpen
-    }
+    },
+
   }
 };
 </script>
@@ -154,24 +171,12 @@ nav {
 }
 .outlineBtn {
   outline: none;
-  /* box-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  --tw-ring-offset-width: 2px;
-box-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color), var(--ring-shadow);
---tw-ring-offset-color: #1f2937;
-box-shadow: 0 0 0 var(--ring-offset-width) var(--ring-offset-color), var(--ring-shadow);
---tw-ring-color: rgba(255, 255, 255, var(--tw-ring-opacity)); */
-border: 3px solid #fff;
-/* -webkit-box-shadow: 0px 0px 0px 4px rgba(34, 60, 80, 0.39);
--moz-box-shadow: 0px 0px 0px 4px rgba(34, 60, 80, 0.39);
-box-shadow: 0px 0px 0px 4px rgba(34, 60, 80, 0.39); */
-
--webkit-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
--moz-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
-
+  border: 3px solid #fff;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
+  -moz-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
+  box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
 }
-button:focus {
-    outline: none;
+button.userpic:focus {
+  outline: none;
 }
-/* }focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white */
 </style>
