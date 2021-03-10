@@ -7,7 +7,7 @@
   <div class="flex flex-col w-full">
       <header class="">
         <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-between">
-          <h1 class="text-3xl font-bold text-white">
+          <h1 class="text-3xl font-semibold text-white">
             Applications Dashboard
           </h1>
           
@@ -32,7 +32,7 @@
     </header>
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div class="px-4 py-6 sm:px-0">
+        <div class="px-4 pt-6 sm:px-0">
           <div>
               <div class="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
                 <Card :cardsInfo="cardsInfo" />
