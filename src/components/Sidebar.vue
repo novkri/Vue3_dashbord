@@ -1,7 +1,7 @@
 <template>
 <!-- transition ease-in duration-700  -->
 <!-- <transition name="slide-fade"> -->
-  <nav class="w-80 z-1000 right-0 md:w-72 h-auto md:block absolute md:static" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
+  <nav class="bg-secondMain w-80 z-1000 right-0 md:w-72 h-auto md:block absolute md:static" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
     <div class="max-w-7xl mx-auto py-3 md:py-4">
       <div class="flex items-center justify-center">
         <div class="items-center w-full hidden md:flex flex-col">
@@ -154,10 +154,6 @@ export default {
 </script>
 
 <style scoped>
-nav {
-  background-color: #01081f;
-}
-
 .nav-li:hover {
   cursor: pointer;
   border-right: 3px solid #3d7eff;

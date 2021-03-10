@@ -1,6 +1,6 @@
 <template>
       <div
-    class="card flex flex-col overflow-hidden shadow rounded-lg border-solid px-5 py-4 pb-6"
+    class="bg-secondMain flex flex-col overflow-hidden shadow rounded-lg border-solid px-5 py-4 pb-6"
   >
     <div class="mb-6 flex flex-row justify-between">
       <h2 class="text-white font-semibold">Acquisitions</h2>

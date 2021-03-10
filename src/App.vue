@@ -12,9 +12,4 @@
   background-color: #071649;
   background: radial-gradient(circle, #1e3370 1%, #051442 100%);
 }
-
-.card {
-  background-color: #01081f;
-}
-
 </style>

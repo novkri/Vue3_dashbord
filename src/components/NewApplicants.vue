@@ -1,5 +1,5 @@
 <template>
-<div class="container card overflow-hidden flex flex-col shadow rounded-lg px-5 py-4 pb-6 mx-auto w-full">
+<div class="container bg-secondMain overflow-hidden flex flex-col shadow rounded-lg px-5 py-4 pb-6 mx-auto w-full">
   <div class="mb-6 flex flex-row justify-between">
       <h2 class="text-white font-semibold">New Applications</h2>
       <span class="text-sm text-blue-400">Today</span>

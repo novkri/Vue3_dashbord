@@ -13,7 +13,7 @@
           
 
           <div class="inline-flex">
-            <button @click="openUserMenu" type="button" class="sidebar-btns inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
+            <button @click="openUserMenu" type="button" class="bg-secondMain inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open user menu</span>
                 <svg class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -21,7 +21,7 @@
             </button>
           
             <!-- Mobile menu button -->
-            <button @click="openMenu" type="button" class="sidebar-btns md:hidden inline-flex items-center justify-center p-2 ml-6 mr-2 rounded-md text-white hover:text-white focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
+            <button @click="openMenu" type="button" class="bg-secondMain md:hidden inline-flex items-center justify-center p-2 ml-6 mr-2 rounded-md text-white hover:text-white focus:outline-none " aria-controls="mobile-menu" aria-expanded="false">
               <span class="sr-only">Open main menu</span>
               <svg class="block h-7 w-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -110,7 +110,4 @@ export default {
 </script>
 
 <style scoped>
-.sidebar-btns {
-  background-color: #01081f;
-}
 </style>

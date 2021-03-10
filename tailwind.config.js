@@ -15,6 +15,9 @@ module.exports = {
        '75': 75,
        '1000': 1000,
         'auto': 'auto',
+      },
+      colors: {
+        secondMain: '#01081f'
       }
     },
   },

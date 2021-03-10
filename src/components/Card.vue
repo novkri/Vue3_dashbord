@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex card overflow-hidden shadow rounded-lg border-solid"
+    class="flex bg-secondMain overflow-hidden shadow rounded-lg border-solid"
     v-for="card in cardsInfo" :key="card.index"
   >
     <div class="px-4 py-5 sm:p-6 text-center w-3/5">
