@@ -17,8 +17,9 @@ module.exports = {
         'auto': 'auto',
       },
       colors: {
-        secondMain: '#01081f'
-      }
+        secondMain: '#01081f',
+        accent: '#3d7eff',
+      },
     },
   },
   variants: {

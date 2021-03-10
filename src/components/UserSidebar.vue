@@ -9,7 +9,7 @@
 
 
       <div class="flex flex-col items-center justify-center relative">
-        <div class="sticky top-0 h-60 bg-secondMain py-6 w-full shadow">
+        <header class="sticky top-0 h-60 bg-secondMain py-6 w-full shadow">
           <div class="flex justify-end pr-8">
             <button @click="$emit('openUserMenu')" type="button" class="bg-transparent inline-flex items-center justify-center p-2 text-gray-200 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
               <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -25,23 +25,23 @@
             <span>Julia Pellegrini</span>
             <span>Recruiting Manager</span>
           </div>
-        </div>
+        </header>
 
       
       <ul class="flex flex-col items-baseline w-full">
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Dashboard</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Jobs</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Applications</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Team</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Reports</a>
         </li>
       </ul>
@@ -73,19 +73,13 @@ export default {
 </script>
 
 <style scoped>
-.nav-li:hover {
-  cursor: pointer;
-  border-right: 3px solid #3d7eff;
-  background-color: #020b2a;
-}
-
 .nav-li:hover span{
   color: #fff;
 }
 .nav-li:hover a {
   color: #3d7eff;
 }
-.outlineBtn {
+/* .outlineBtn {
   outline: none;
   border: 3px solid #fff;
   -webkit-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
@@ -94,5 +88,5 @@ export default {
 }
 button.userpic:focus {
   outline: none;
-}
+} */
 </style>

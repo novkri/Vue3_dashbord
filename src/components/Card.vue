@@ -5,13 +5,13 @@
   >
     <div class="px-4 py-5 sm:p-6 text-center w-3/5">
       <div class="chart-info-wrapper">
-        <h2 class="text-sm text-gray-400 font-bold">{{ card.name }}</h2>
-        <span class="mt-1 text-3xl font-semibold text-white">{{ card.amount }}</span>
+        <h2 class="text-sm text-gray-400 font-bold uppercase mb-2">{{ card.name }}</h2>
+        <span class="mt-1 text-2xl font-semibold text-white font-medium">{{ card.amount }}</span>
       </div>
     </div>
 
-    <div class="text-center w-2/5 flex justify-center items-center chart-container">
-      <div class="chart-svg">
+    <div class="text-center w-2/5 flex justify-center items-center p-4">
+      <div class="chart-svg relative flex-1 max-w-xs">
         <svg viewBox="0 0 36 36" class="circular-chart" :class="'color' + card.index">
           <path class="circle-bg" d="M18 2.0845
               a 15.9155 15.9155 0 0 1 0 31.831
@@ -47,31 +47,13 @@ export default {
 </script>
 
 <style scoped>
-.chart-container {
-  padding: 16px;
-}
 
-
-  .chart-info-wrapper h2 {
-    /* font-size: 12px;
-    line-height: 16px; */
-    text-transform: uppercase;
-    margin: 0 0 8px 0;
-  }
-  
-  .chart-info-wrapper span {
-    font-size: 24px;
-    line-height: 32px;
-    font-weight: 500;
-  }
-
-
-.chart-svg {
+/* .chart-svg {
   position: relative;
   max-width: 90px;
   min-width: 40px;
   flex: 1;
-}
+} */
 
 .circle-bg {
   fill: none;

@@ -16,7 +16,7 @@
           <div class="pl-1 mt-3 flex justify-between">
             <div class="flex items-center">
               <span class="rounded-full w-3 h-3 bg-blue-500 inline-flex" :class="'color-' + item.name"></span>
-              <span class="pl-3 text-sm font-light span-name">{{ item.name }}</span>
+              <span class="pl-3 text-sm font-light capitalize">{{ item.name }}</span>
             </div>
             <span class="text-sm font-light">{{ item.percentage }}%</span>
           </div>
@@ -65,10 +65,6 @@ export default {
 </script>
 
 <style scoped>
-.span-name {
-  text-transform: capitalize;
-}
-
 .color-applications {
   background-color: #60A5FA;
 }

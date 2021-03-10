@@ -25,14 +25,14 @@
               </div> -->
             <!-- </div>
             </div> -->
-            <div class="px-8 py-6 flex items-center">
+            <div class="flex justify-start py-6 px-8 w-full flex items-center ">
               <svg class="text-blue-500 md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
             <span class="font-semibold text-white">Recruiter</span>
             </div>
             <ul class="flex flex-col w-full">
-              <li class=" py-3 nav-li">
+              <li class="py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
                 <a href="#" class="px-4 font-medium flex jystify-start items-center pl-8">
                   <svg class="md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
@@ -40,7 +40,7 @@
                   <span class="text-gray-400 font-bold">Dashboard</span>
                 </a>
               </li>
-              <li class=" py-3 nav-li">
+              <li class=" py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
                 <a href="#" class="px-4 font-medium flex jystify-start items-center pl-8">
                   <svg class="md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -48,7 +48,7 @@
                   <span class="text-gray-400 font-bold">Jobs</span>
                 </a>
               </li>
-              <li class=" py-3 nav-li">
+              <li class=" py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
                 <a href="#" class="px-4 font-medium flex jystify-start items-center pl-8">
                   <svg class="md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -56,7 +56,7 @@
                   <span class="text-gray-400 font-bold">Applications</span>
                 </a>
               </li>
-              <li class=" py-3 nav-li">
+              <li class=" py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
                 <a href="#" class="px-4 font-medium flex jystify-start items-center pl-8">
                   <svg class="md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -64,7 +64,7 @@
                   <span class="text-gray-400 font-bold">Team</span>
                 </a>
               </li>
-              <li class=" py-3 nav-li">
+              <li class=" py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
                 <a href="#" class="px-4 font-medium flex jystify-start items-center pl-8">
                   <svg class="md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
@@ -111,19 +111,19 @@
       </div>
               
       <ul class="flex flex-col items-baseline w-full ">
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Dashboard</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Jobs</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Applications</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Team</a>
         </li>
-        <li class="w-full  py-4 nav-li">
+        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Reports</a>
         </li>
       </ul>
@@ -154,26 +154,21 @@ export default {
 </script>
 
 <style scoped>
-.nav-li:hover {
-  cursor: pointer;
-  border-right: 3px solid #3d7eff;
-  background-color: #020b2a;
-}
-
 .nav-li:hover span{
   color: #fff;
 }
 .nav-li:hover a {
   color: #3d7eff;
 }
-.outlineBtn {
+/* вернуть ring */
+/* .outlineBtn {
   outline: none;
   border: 3px solid #fff;
   -webkit-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
   -moz-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
   box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
-}
-button.userpic:focus {
+} */
+/* button.userpic:focus {
   outline: none;
-}
+} */
 </style>
