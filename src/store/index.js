@@ -3,7 +3,8 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     cards: [],
-    acquisitions: []
+    acquisitions: [],
+    applicants: []
   },
   mutations: {
     setCardsInfo(state, info) {
@@ -15,6 +16,10 @@ export default createStore({
 
     setAcquisitions(state, info) {
       state.acquisitions = info
+    },
+
+    setApplicants(state, info) {
+      state.applicants = info
     },
   },
   actions: {
@@ -32,6 +37,14 @@ export default createStore({
         return response.json();
       });
       commit("setAcquisitions", response)
+    },
+
+    async getNewApplicants({commit}) {
+      let response = await fetch("http://localhost:3000/Applicants")
+      .then((response) => {
+        return response.json();
+      });
+      commit("setApplicants", response)
     }
   },
   modules: {},
@@ -42,6 +55,10 @@ export default createStore({
 
     acquisitions: state => {
       return state.acquisitions;
+    },
+
+    applicants: state => {
+      return state.applicants;
     }
   }
 });

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex card overflow-hidden shadow rounded-lg border-purple-800 border-solid"
+    class="flex card overflow-hidden shadow rounded-lg border-solid"
     v-for="card in cardsInfo" :key="card.index"
   >
     <div class="px-4 py-5 sm:p-6 text-center w-3/5">
@@ -19,7 +19,7 @@
           <path class="circle" :stroke-dasharray="`${card.progress}, 100`" d="M18 2.0845
               a 15.9155 15.9155 0 0 1 0 31.831
               a 15.9155 15.9155 0 0 1 0 -31.831"></path>
-          <text x="18" y="20.35" class="percentage">30%</text>
+          <text x="18" y="20.35" class="percentage">{{ card.progress }}%</text>
         </svg>
       </div>
 

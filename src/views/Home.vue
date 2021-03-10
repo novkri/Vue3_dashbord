@@ -29,15 +29,15 @@
           <div class="border-4 border-dashed border-gray-200 rounded-lg">
               <div class="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-3">
                 <Card :cardsInfo="cardsInfo" />
-                <div class="col-span-2">
+                <div class="lg:col-span-2 lg:row-span-2">
                   <TopActiveJobs />
                 </div>
                 
                 <div>
                   <Acquisitions :acquisitions="acquisitions" />
                 </div>
-                <div class="border border-white col-start-3">New Applicants
-                  
+                <div class="border border-white lg:col-start-3 lg:row-span-2">
+                  <NewApplicants :applicants="applicants" />
                 </div>
                 
               </div>
@@ -56,6 +56,7 @@ import Sidebar from "@/components/Sidebar.vue";
 import Card from "@/components/Card.vue";
 import TopActiveJobs from "@/components/TopActiveJobs.vue";
 import Acquisitions from "@/components/Acquisitions.vue";
+import NewApplicants from "@/components/NewApplicants.vue";
 
 import { mapGetters } from 'vuex';
 
@@ -65,7 +66,8 @@ export default {
     Sidebar,
     Card,
     TopActiveJobs,
-    Acquisitions
+    Acquisitions,
+    NewApplicants
   },
   data: () => {
     return {
@@ -75,12 +77,14 @@ export default {
   computed: {
     ...mapGetters([
       'cardsInfo',
-      'acquisitions'
+      'acquisitions',
+      'applicants'
     ])
   },
   async mounted() {
     this.$store.dispatch("getCardsInfo");
     this.$store.dispatch("getAcquisitions");
+    this.$store.dispatch("getNewApplicants");
   },
   methods: {
     openMenu() {
