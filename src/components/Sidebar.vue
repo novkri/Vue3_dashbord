@@ -1,6 +1,4 @@
 <template>
-<!-- transition ease-in duration-700  -->
-<!-- <transition name="slide-fade"> -->
   <nav class="bg-secondMain w-80 z-1000 right-0 md:w-72 h-screen md:h-auto md:block absolute md:static" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
     <div class="max-w-7xl mx-auto py-3 md:py-4">
       <div class="flex items-center justify-center">
@@ -13,7 +11,7 @@
             <div class="font-semibold text-white">Recruiter</div>
             </div>
             <ul class="flex flex-col w-full">
-              <li class="py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
+              <li class="py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent active">
                 <a href="#" class="px-4 font-medium flex jystify-start items-center pl-8">
                   <svg class="md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />
@@ -58,7 +56,7 @@
         </div>
       </div>
     </div>
-<!-- <transition name="slide-fade"> -->
+
     <!-- Mobile menu, show/hide based on menu state. -->
     <div class="md:hidden" id="mobile-menu">
       <!-- Mobile menu button -->
@@ -69,30 +67,9 @@
           </svg>
         </button> 
       </div>
-
-
-      <div class="flex items-center justify-center">
-        <!-- Profile dropdown -->
-        <div class="relative">
-          <div class="py-2">
-            <!-- <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="userpic max-w-xs bg-gray-800 rounded-full flex items-center text-sm" id="user-menu" aria-expanded="false" aria-haspopup="true">
-              <span class="sr-only">Open user menu</span>
-              <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-            </button> -->
-          </div>
-
-          <div :class="{ block: isUserMenuOpen, hidden: !isUserMenuOpen }" class="origin-top-right absolute -left-12 w-32 rounded-md shadow-lg py-1 mt-3 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
-          </div>
-        </div>
-      </div>
               
       <ul class="flex flex-col items-baseline w-full ">
-        <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
+        <li class="w-full active py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
           <a href="#" class="text-gray-400 px-6 py-2 font-bold">Dashboard</a>
         </li>
         <li class="w-full  py-4 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">
@@ -135,21 +112,15 @@ export default {
 </script>
 
 <style scoped>
-.nav-li:hover span{
+.nav-li:hover span, .nav-li.active span{
   color: #fff;
 }
-.nav-li:hover a {
+.nav-li:hover a,.nav-li.active a  {
   color: #3d7eff;
 }
-/* вернуть ring */
-/* .outlineBtn {
-  outline: none;
-  border: 3px solid #fff;
-  -webkit-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
-  -moz-box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
-  box-shadow: 0px 0px 0px 2px rgba(34, 60, 80, 0.39) inset;
-} */
-/* button.userpic:focus {
-  outline: none;
-} */
+
+.nav-li.active {
+  cursor: pointer !important;
+  border-right: 4px solid #3d7eff !important;
+}
 </style>
