@@ -4,7 +4,8 @@ export default createStore({
   state: {
     cards: [],
     acquisitions: [],
-    applicants: []
+    applicants: [],
+    currentUser: {}
   },
   mutations: {
     setCardsInfo(state, info) {
@@ -20,6 +21,12 @@ export default createStore({
 
     setApplicants(state, info) {
       state.applicants = info
+    },
+
+    setCurrentUser(state, info) {
+      // !!!!!!
+      state.currentUser = info[0]
+      console.log(info, state.currentUser);
     },
   },
   actions: {
@@ -45,7 +52,16 @@ export default createStore({
         return response.json();
       });
       commit("setApplicants", response)
-    }
+    },
+
+    // !!!!! это пока не current User !!!
+    async getCurrentUser({commit}) {
+      let response = await fetch("http://localhost:3000/users")
+      .then((response) => {
+        return response.json();
+      });
+      commit("setCurrentUser", response)
+    },
   },
   modules: {},
   getters: {
@@ -59,6 +75,10 @@ export default createStore({
 
     applicants: state => {
       return state.applicants;
+    },
+
+    currentUser: state => {
+      return state.currentUser;
     }
   }
 });

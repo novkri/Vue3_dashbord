@@ -15,10 +15,10 @@
                 </div>
                 
                 <div class="pl-1 flex flex-col justify-start items-start w-full">
-                    <div class="text-left font-normal text-white overflow-ellipsis w-10/12">
-                        {{ person.name }}
+                    <div class="text-left font-normal text-white overflow-ellipsis w-10/12 capitalize">
+                        {{ person.firstName }} {{ person.lastName}}
                     </div>
-                    <div class="text-left text-gray-400 text-sm overflow-ellipsis w-10/12">
+                    <div class="text-left text-gray-400 text-sm overflow-ellipsis w-10/12 capitalize">
                         Applied for <span class="font-bold">{{ person.application }}</span> 
                     </div>
                 </div>

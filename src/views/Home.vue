@@ -54,7 +54,7 @@
       </div>
     </main>
 
-      <UserSideBar v-if="isUserMenuOpen" :isUserMenuOpen="isUserMenuOpen" @openUserMenu="openUserMenu()" />
+      <UserSideBar v-if="isUserMenuOpen" :isUserMenuOpen="isUserMenuOpen" @openUserMenu="openUserMenu()" :currentUser="currentUser" />
   </div>
 
 </div>
@@ -90,10 +90,12 @@ export default {
     ...mapGetters([
       'cardsInfo',
       'acquisitions',
-      'applicants'
+      'applicants',
+      'currentUser'
     ])
   },
   async mounted() {
+    this.$store.dispatch("getCurrentUser");
     this.$store.dispatch("getCardsInfo");
     this.$store.dispatch("getAcquisitions");
     this.$store.dispatch("getNewApplicants");
