@@ -1,35 +1,16 @@
 <template>
 <!-- transition ease-in duration-700  -->
 <!-- <transition name="slide-fade"> -->
-  <nav class="bg-secondMain w-80 z-1000 right-0 md:w-72 h-auto md:block absolute md:static" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
+  <nav class="bg-secondMain w-80 z-1000 right-0 md:w-72 h-screen md:h-auto md:block absolute md:static" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
     <div class="max-w-7xl mx-auto py-3 md:py-4">
       <div class="flex items-center justify-center">
         <div class="items-center w-full hidden md:flex flex-col">
-          <!-- <div class="flex items-center"> -->
-            <!-- Profile dropdown  class="relative" -->
-            <!-- <div> -->
-              <!-- <div class="py-5"> -->
-                <!-- <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="userpic max-w-xs bg-gray-800 rounded-full flex items-center text-sm" id="user-menu" aria-expanded="false" aria-haspopup="true">
-                  <span class="sr-only">Open user menu</span>
- 
-                  <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
-                </button> -->
-              <!-- </div> -->
 
-              <!-- <div :class="{ block: isUserMenuOpen, hidden: !isUserMenuOpen }" class="origin-top-right absolute -left-16 w-44 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
-              </div> -->
-            <!-- </div>
-            </div> -->
             <div class="flex justify-start py-6 px-8 w-full flex items-center ">
               <svg class="text-blue-500 md:h-9 md:w-9 md:inline hidden pr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
-            <span class="font-semibold text-white">Recruiter</span>
+            <div class="font-semibold text-white">Recruiter</div>
             </div>
             <ul class="flex flex-col w-full">
               <li class="py-3 nav-li hover:cursor-pointer border-r-4 border-transparent hover:border-accent">

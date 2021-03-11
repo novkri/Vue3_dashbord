@@ -3,15 +3,13 @@
     class="flex bg-secondMain overflow-hidden shadow rounded-lg border-solid"
     v-for="card in cardsInfo" :key="card.index"
   >
-    <div class="px-4 py-5 sm:p-6 text-center w-3/5">
-      <div class="chart-info-wrapper">
-        <h2 class="text-sm text-gray-400 font-bold uppercase mb-2">{{ card.name }}</h2>
+    <div class="px-4 py-5 sm:p-6 w-3/5 flex flex-col justify-center items-center">
+        <h2 class="text-base text-gray-400 font-bold uppercase mb-2">{{ card.name }}</h2>
         <span class="mt-1 text-2xl font-semibold text-white font-medium">{{ card.amount }}</span>
-      </div>
     </div>
 
     <div class="text-center w-2/5 flex justify-center items-center p-4">
-      <div class="chart-svg relative flex-1 max-w-xs">
+      <div class="chart-svg relative max-w-xs">
         <svg viewBox="0 0 36 36" class="circular-chart" :class="'color' + card.index">
           <path class="circle-bg" d="M18 2.0845
               a 15.9155 15.9155 0 0 1 0 31.831
@@ -48,12 +46,11 @@ export default {
 
 <style scoped>
 
-/* .chart-svg {
-  position: relative;
+.chart-svg {
   max-width: 90px;
   min-width: 40px;
   flex: 1;
-} */
+}
 
 .circle-bg {
   fill: none;

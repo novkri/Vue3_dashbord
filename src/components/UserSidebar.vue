@@ -1,10 +1,10 @@
 <template>
-  <nav class="bg-secondMain w-80 z-1000 right-0 md:w-96 h-screen md:block absolute overflow-auto" :class="{ block: isMenuOpen, hidden: !isMenuOpen }">
+  <nav class="bg-secondMain w-80 z-1000 right-0 md:w-96 h-screen md:h-auto md:block absolute overflow-auto">
 
       <div class="flex flex-col items-center justify-center relative">
-        <header class="sticky top-0 h-60 bg-secondMain my-6 w-full shadow">
+        <header class="sticky top-0 h-60 bg-secondMain my-6 w-full shadow z-1000">
           <div class="flex justify-end pr-8">
-            <button @click="$emit('openUserMenu')" type="button" class="bg-transparent inline-flex items-center justify-center p-2 text-gray-200 rounded-md hover:text-white hover:bg-gray-700 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+            <button @click="$emit('openUserMenu')" type="button" class="bg-transparent inline-flex items-center justify-center p-2 text-gray-200 rounded-md hover:text-white hover:bg-gray-900 focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
               <svg class="block h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -12,9 +12,7 @@
           </div>
           <div class="py-2 flex flex-col items-center justify-center">
             <button @click="openUserMenu" type="button" :class="{ outlineBtn: isUserMenuOpen }" class="userpic max-w-xs bg-gray-800 rounded-full flex items-center mb-4" id="user-menu" aria-expanded="false" aria-haspopup="true">
-              <span class="sr-only">Open user menu</span>
-              <!-- сжата - ??? -->
-              <img  class="rounded-full w-28 h-28" :src="currentUser.photo" alt="userpic">
+              <img class="rounded-full w-28 h-28 object-cover" :src="currentUser.photo" alt="userpic">
             </button>
             <span class="text-gray-500 font-semibold text-sm pb-2">{{ currentUser.firstName }} {{ currentUser.lastName }}</span>
             <span class="text-gray-500 font-normal text-sm">{{ currentUser.position }}</span>
@@ -38,7 +36,7 @@
           <ul class="flex flex-col w-full">
               <li class="flex flex-row w-full">
                   <div class="select-none cursor-pointer flex flex-1 items-center pr-6 p-4 w-full">
-                      <div class="flex flex-col w-10 h-10 justify-center items-center mr-4">
+                      <div class="flex flex-col w-10 h-10 justify-center items-center mr-2 md:mr-4">
                           <a href="#" class="block relative">
                               <img alt="profil" src="../assets/messenger/msg1.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
                           </a>
@@ -56,7 +54,7 @@
 
                <li class="flex flex-row w-full">
                   <div class="select-none cursor-pointer flex flex-1 items-center pr-6 p-4 w-full">
-                      <div class="flex flex-col w-10 h-10 justify-center items-center mr-4">
+                      <div class="flex flex-col w-10 h-10 justify-center items-center mr-2 md:mr-4">
                           <a href="#" class="block relative">
                               <img alt="profil" src="../assets/messenger/msg2.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
                           </a>
@@ -73,7 +71,7 @@
               </li>
                <li class="flex flex-row w-full">
                   <div class="select-none cursor-pointer flex flex-1 items-center pr-6 p-4 w-full">
-                      <div class="flex flex-col w-10 h-10 justify-center items-center mr-4">
+                      <div class="flex flex-col w-10 h-10 justify-center items-center mr-2 md:mr-4">
                           <a href="#" class="block relative">
                               <img alt="profil" src="../assets/messenger/msg3.png" class="mx-auto object-cover rounded-full h-10 w-10 "/>
                           </a>

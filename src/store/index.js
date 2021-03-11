@@ -26,7 +26,6 @@ export default createStore({
     setCurrentUser(state, info) {
       // !!!!!!
       state.currentUser = info[0]
-      console.log(info, state.currentUser);
     },
   },
   actions: {
